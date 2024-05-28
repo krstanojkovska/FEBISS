@@ -44,6 +44,9 @@ To run analyses of trajectories the open-source software CPPTRAJ modified with t
 repository is used. These dependencies are not necessary for the installation of FEBISS, 
 but rather FEBISS provides a script to set-up these dependencies via
 
+We reccomend the use of CUDA to speed up the GIST calculations. In this case, make sure that
+cuda is installed on your system and the the CUDA_HOME variable points to your CUDA installation.
+
 .. code-block:: bash
 
    febiss_setup
