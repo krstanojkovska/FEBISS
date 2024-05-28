@@ -250,10 +250,12 @@ class Plot:
         plt.yticks(np.arange(ymin, ymax + ystep, step=ystep))
         ax.set_ylim([ymin, ymax])
         ax.set_xlim([xmin, xmax])
-        for tick in ax.xaxis.get_major_ticks():
-            tick.label.set_fontsize(self.fontsize)
-        for tick in ax.yaxis.get_major_ticks():
-            tick.label.set_fontsize(self.fontsize)
+        ax.xaxis.set_tick_params(labelsize=self.fontsize)
+        ax.yaxis.set_tick_params(labelsize=self.fontsize)
+        # for tick in ax.xaxis.get_major_ticks():
+        #     tick.label.set_fontsize(self.fontsize)
+        # for tick in ax.yaxis.get_major_ticks():
+        #     tick.label.set_fontsize(self.fontsize)
 
         # creates legend according with or without green bar
         self._create_legend(ax, save_selected)
